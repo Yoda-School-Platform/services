@@ -1,0 +1,28 @@
+{
+  "name": "@yoda/services",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The backend services for the Yoda school platform",
+  "scripts": {
+    "bootstrap": "lerna bootstrap --force-local"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yoda-School-Platform/services.git"
+  },
+  "keywords": [
+    "education",
+    "school",
+    "platform",
+    "yoda"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Yoda-School-Platform/services/issues"
+  },
+  "homepage": "https://github.com/Yoda-School-Platform/services#readme",
+  "devDependencies": {
+    "lerna": "^3.19.0"
+  }
+}

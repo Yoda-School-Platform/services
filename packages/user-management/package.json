@@ -1,0 +1,44 @@
+{
+  "name": "@yoda/user-management-service",
+  "version": "0.1.0",
+  "description": "",
+  "source": "src/index.ts",
+  "main": "dist/user-management.js",
+  "module": "dist/user-management.mjs",
+  "scripts": {
+    "build": "microbundle build --target node --no-sourcemap",
+    "release": "standard-version",
+    "watch": "microbundle watch --target node --no-sourcemap"
+  },
+  "keywords": [
+    "education",
+    "school",
+    "platform",
+    "yoda",
+    "user",
+    "management",
+    "permissions"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@yoda/build-standard": "latest",
+    "@yoda/eslint-config-services": "latest",
+    "@yoda/prettier-config-services": "latest",
+    "eslint": "6.7.1",
+    "eslint-config-prettier": "6.7.0",
+    "eslint-plugin-prettier": "3.1.1",
+    "microbundle": "0.11.0",
+    "prettier": "1.19.1",
+    "standard-version": "7.0.1",
+    "tslint": "5.20.1",
+    "tslint-config-prettier": "1.18.0",
+    "typescript": "3.7.2"
+  },
+  "eslintConfig": {
+    "extends": "@yoda/eslint-config-services"
+  },
+  "prettier": {
+    "extends": "@yoda/prettier-config-services"
+  }
+}
