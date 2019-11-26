@@ -11,15 +11,26 @@ function error(res, error) {
     res.send({ error: error});
 }
 
+// token: registration token for cloud messaging
+function isLoginValid({ username, password, token }) {
+    return username && password && token;
+}
+
 api.post('/login', (req, res) => {
     if (!req.body) {
         error(res, errorCode(001));
         return;
     }
 
+    if (!isLoginValid(req.body)) {
+        error(res, errorCode(002));
+        return;
+    }
+
     res.send({
         data: {
-            token: chance.hash({ length: 24 })
+            token: chance.hash({ length: 24 }),
+            expiryDate: new Date(2025, 01, 01).getTime()
         }
     });
 });
@@ -32,7 +43,7 @@ api.post('/register', (req, res) => {
 
     res.send({
         data: 'success'
-    })
+    });
 });
 
 module.exports = api;

@@ -1,7 +1,11 @@
 function mapErrorCodeToMessage(errorCode) {
     const map = {
         001: {
-            msg: 'No response object received',
+            msg: 'No request object received',
+            level: 'fatal'
+        },
+        002: {
+            msg: 'Invalid request object received',
             level: 'fatal'
         }
     };
