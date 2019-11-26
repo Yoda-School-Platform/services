@@ -20,6 +20,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api', api);
 
+if (!argv.silent && !argv.quiet) {
+    console.log('listen on', `${host}:${port}`);
+}
+
 app.listen({
     port: config.port,
     host: config.host
